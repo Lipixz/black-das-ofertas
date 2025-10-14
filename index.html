@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BLACK DAS OFERTAS — Ofertas</title>
+  <style>
+    :root {
+      --dark-bg: #0b0b0d;
+      --purple: #7b2ff7;
+      --orange: #ff9a00;
+      --text-light: #ffffff;
+      --radius: 14px;
+      --maxw: 480px;
+      font-family: 'Poppins', Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      color: var(--text-light);
+      background: var(--dark-bg);
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('ChatGPT Image 14 de out. de 2025, 00_17_04.png') center/cover no-repeat;
+      filter: blur(10px) brightness(0.5);
+      z-index: -1;
+    }
+
+    .wrap {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 36px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: var(--maxw);
+      background: rgba(20, 20, 25, 0.75);
+      border-radius: var(--radius);
+      backdrop-filter: blur(10px);
+      padding: 32px 28px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+    }
+
+    .logo {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid var(--orange);
+      box-shadow: 0 0 40px var(--purple);
+      animation: pulse 3s infinite ease-in-out;
+    }
+    .logo img { width: 100%; height: 100%; object-fit: cover; }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 20px var(--purple), 0 0 40px var(--orange); }
+      50% { box-shadow: 0 0 35px var(--orange), 0 0 60px var(--purple); }
+      100% { box-shadow: 0 0 20px var(--purple), 0 0 40px var(--orange); }
+    }
+
+    .store-name {
+      font-size: 34px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--text-light);
+      text-shadow: 0 0 14px var(--purple), 0 0 26px var(--orange);
+      letter-spacing: 1px;
+      margin: 0 0 10px;
+    }
+
+    h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--orange);
+      margin: 6px 0 12px;
+    }
+
+    p.bio {
+      color: #d0dcff;
+      font-size: 15px;
+      margin: 0 0 22px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .btn {
+      display: block;
+      text-decoration: none;
+      background: linear-gradient(90deg, var(--purple), var(--orange));
+      color: #fff;
+      padding: 14px 16px;
+      border-radius: 12px;
+      font-weight: 600;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.5);
+    }
+
+    .footer {
+      margin-top: 24px;
+      font-size: 12px;
+      color: #b0c4ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="logo">
+        <img src="./blackdof.jpg" alt="Logo Black das Ofertas">
+      </div>
+      <div class="store-name">BLACK DAS OFERTAS</div>
+      <h1>As Melhores Ofertas Aqui!</h1>
+      <p class="bio">Economize em grandes marcas e aproveite promoções exclusivas 💥</p>
+      
+      <div class="links">
+        <a href="#" class="btn">Ofertas Shopee</a>
+        <a href="#" class="btn">Ofertas Amazon</a>
+        <a href="#" class="btn">Ofertas Mercado Livre</a>
+        <a href="#" class="btn">Ofertas AliExpress</a>
+      </div>
+
+      <div class="footer">© <span id="year"></span> BLACK DAS OFERTAS</div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
